@@ -4,5 +4,6 @@
     name: openvpn@server
     state: restarted
 
-- name: Reload sysctl
-  command: sysctl -p
+- name: Reload sysctl configuration
+  sysctl:
+    reload: yes
